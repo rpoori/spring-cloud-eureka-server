@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: cloud
+eureka:
+  instance:
+    hostname: ${peer.hostname}
+  client:
+    serviceUrl:
+      defaultZone: ${list.of.peers}
+    registerWithEureka: true
+    fetchRegistry: true
